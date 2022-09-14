@@ -1,0 +1,31 @@
+<SCRIPT>
+  var fso = new ActiveXObject("Scripting.FileSystemObject"); 
+  fin = fso.OpenTextFile("d:/1/mingwen.txt"); 
+  fout = fso.createtextfile("d:/1/miwen.out");
+  st=fin.Readline();
+  for (i=0;i<st.length;i++)
+  {
+    if ((st[i]>='a'&&st[i]<='z')||(st[i]>='A'&&st[i]<='Z')) //是否为字母
+      {
+           if (st[i]=='z' || st[i]=='Z') 
+           {    
+               if (st[i]=='z')
+                    //document.write('a');
+                    fout.Writeline('a')
+               else 
+                    //document.write('A');
+                    fout.Writeline('A')
+            }
+           else //输出后一个字母
+           { 
+               c=st[i].charCodeAt();
+              // document.write(String.fromCharCode(c+1));
+              fout.Writeline(String.fromCharCode(c+1))
+            } 
+      }//if
+     else  //非字母原样输出
+         //document.write(st[i]);
+          fout.Writeline(st[i])
+  }//for
+</SCRIPT>
+

@@ -1,0 +1,10 @@
+﻿<SCRIPT>
+  var s=0,n=50;
+  var fso = new ActiveXObject("Scripting.FileSystemObject"); 
+  f = fso.OpenTextFile("math.txt"); 
+  for (var i=1;i<=n;i++) 
+  {   x=f.Readline();
+      s=s+Number(x);
+  }
+  document.write(s/n);
+</SCRIPT>

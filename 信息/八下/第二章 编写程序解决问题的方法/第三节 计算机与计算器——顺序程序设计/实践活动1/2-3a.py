@@ -1,0 +1,9 @@
+name=input("请输入姓名：");
+yw=eval(input("请输入语文分："));
+sx=eval(input("请输入数学分："));
+yy=eval(input("请输入英语分："));
+zz=eval(input("请输入政治分："));
+ls=eval(input("请输入历史分："));
+s=yw+sx+yy+zz+ls;
+t=s/5;
+print(name,"同学的总分是",s,"平均分是",t);

@@ -1,0 +1,24 @@
+<SCRIPT>
+  st=prompt("请输入密文：")
+  for (i=0;i<st.length;i++)
+  {
+    if ((st[i]>='a'&&st[i]<='z')||(st[i]>='A'&&st[i]<='Z')) //是否为字母
+      {
+           if (st[i]=='a' || st[i]=='A') 
+           {    
+               if (st[i]=='a')
+                    document.write('z');
+               else 
+                    document.write('Z');
+            }
+           else //输出后一个字母
+           { 
+               c=st[i].charCodeAt();
+               document.write(String.fromCharCode(c-1));
+            } 
+      }//if
+     else  //非字母原样输出
+         document.write(st[i]);
+  }//for
+</SCRIPT>
+

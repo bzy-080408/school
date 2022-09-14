@@ -1,0 +1,23 @@
+<SCRIPT>
+  var fso = new ActiveXObject("Scripting.FileSystemObject"); 
+  fin = fso.OpenTextFile("d:/1/sfz.txt"); 
+  n=100;
+  fout = fso.createtextfile("d:/1/sfz.out");
+  st=fin.Readline();
+  studate=st.substring(6,10)+"年"+st.substring(10,12)+"月"+st.substring(12,14)+"日"
+  var b = new Date(); //获取当前时间
+  b.getTime() //获取时间戳
+  b.getFullYear() //获取年份
+  b.getMonth()+1 //获取月份
+  b.getDate() //获取天
+  b.getHours() //获取小时
+  b.getMinutes() //获取分钟
+  b.getSeconds() //获取秒数
+  b.getDay() //获取星期几
+  b.getMilliseconds() //获取毫秒
+  document.write(b.getFullYear()+"年"+b.getMonth()+"月"+b.getDate()+"日<BR>");
+  document.write(st+"<br>");
+  // alert("出生日期："+st.substring(6,10)+"年"+st.substring(10,12)+"月"+st.substring(12,14)+"日")
+  fin.close();//fout.close();
+</SCRIPT>
+

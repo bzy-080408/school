@@ -1,0 +1,14 @@
+<SCRIPT>
+  var a=new Array(100);
+  n=10;
+  for (i=1;i<=n;i++)
+    a[i]=Number(prompt("输入第"+i+"个数："));
+  for (i=1;i<n;i++)
+  for (j=i+1;j<=n;j++)
+      if (a[j]>a[i]) 
+     {
+        temp=a[i];a[i]=a[j];a[j]=temp;
+     }
+  for (i=10;i>=1;i--)
+     document.write(a[i]+" ")
+</SCRIPT>

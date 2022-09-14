@@ -1,0 +1,22 @@
+<SCRIPT>
+   var fso = new ActiveXObject("Scripting.FileSystemObject"); 
+   fin = fso.OpenTextFile("d:/1/in.txt"); 
+   fout = fso.createtextfile("d:/1/out.txt");
+   st=fin.Readline();
+   st=st+"#";
+  //st="sfsf4";
+  document.write(st+"<BR>")
+  
+  j=1;
+  for  (i=0;i<st.length-1;i++)
+    if (st[i]==st[i+1])
+        j=j+1;
+     else
+    {    document.write(j+" "+st[i]+"<BR>")
+         fout.Writeline(j+" "+st[i]);
+         j=1;
+     }
+  
+   fin.close();fout.close();
+</SCRIPT>
+

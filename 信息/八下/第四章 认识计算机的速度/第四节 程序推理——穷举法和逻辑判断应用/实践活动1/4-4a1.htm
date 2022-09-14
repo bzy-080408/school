@@ -1,0 +1,15 @@
+<SCRIPT>
+  for (A=0;A<=1;A++)
+  for (B=0;B<=1;B++)
+  for (C=0;C<=1;C++)
+  for (D=0;D<=1;D++)
+  {  
+         S=0;
+         if (A!=1) S=S+1;
+         if (C==1) S=S+1;
+         if (D==1) S=S+1;
+         if (D!=1) S=S+1;
+         if (S==3&&A+B+C+D==1)
+            document.write("A="+A+" B="+B+" C="+C+" D="+D);
+  }
+</SCRIPT>

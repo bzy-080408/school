@@ -1,0 +1,15 @@
+<SCRIPT>
+var a=[];
+ n=10;
+ for (i=1;i<=n;i++)
+       a[i]=Number(prompt("输入第"+i+"个数："));
+  for (i=1;i<n;i++)
+      {t=i;
+      for (j=i+1;j<=n;j++)
+           if (a[j]>a[t]) 
+              t=j;
+       temp=a[i];a[i]=a[t];a[t]=temp;
+      }
+ for (i=1;i<=n;i++)
+      document.write(a[i]+" ");
+</SCRIPT>

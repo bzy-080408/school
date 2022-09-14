@@ -1,0 +1,11 @@
+<SCRIPT>
+  s=Number(prompt("输入运输路程："));
+  w=Number(prompt("输入货物重量："));
+  if (s<250) p=100 ; 
+  if (s>=250&&s<500)  p=98 ;
+  if (s>=500&&s<1000)  p=95; 
+  if (s>=1000&&s<2000)  p=90; 
+  if (s>=2000&&s<3000)  p=80 ;
+  if (s>=3000)  p=70;
+  alert("运输费用："+p*w);
+</SCRIPT>

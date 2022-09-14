@@ -1,0 +1,17 @@
+﻿<SCRIPT>
+  var m=6,s,x,n,fin,fout;
+  fso = new ActiveXObject("Scripting.FileSystemObject"); 
+  fout = fso.createtextfile("c:/1/math.out");
+  for (i=1;i<=m;i++)
+  {
+      fin = fso.OpenTextFile("c:/1/math"+i+".txt"); 
+      n = Number(fin.Readline());  //读出人数
+      s=0;
+      for (j=1;j<=n;j++) 
+      {   x=fin.Readline();   //从成绩文件中读入一行
+          s=s+Number(x);
+      }
+     fin.close();
+     fout.Writeline(i+"班平均分："+s/n);
+   }fout.close();
+</SCRIPT>

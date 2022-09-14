@@ -1,0 +1,15 @@
+<SCRIPT>
+  var a=new Array(11)
+  n=10;
+  for (i=1;i<=n;i++)   //输入10个数
+      a[i]=Number(prompt("输入第"+i+"个数："));
+  max=a[1]; //求最大值
+  for (i=2;i<=5;i++)
+      if (a[i]>max) max=a[i];
+  document.write("前5个数中的最大值为："+max+"<BR>");
+ min=a[6]; 
+ for (i=7;i<=n;i++)
+      if (a[i]<min) min=a[i];
+  document.write("后5个数中的最小值为："+min+"<BR>");
+ </SCRIPT>
+

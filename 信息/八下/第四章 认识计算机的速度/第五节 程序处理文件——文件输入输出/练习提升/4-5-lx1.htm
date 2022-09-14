@@ -1,0 +1,16 @@
+﻿<SCRIPT>
+  var fso = new ActiveXObject("Scripting.FileSystemObject"); 
+  fin = fso.OpenTextFile("d:/1/a.txt"); 
+  fout = fso.createtextfile("d:/1/b.out");
+  x=fin.Readline();
+  n=Number(x);
+  for (var i=1;i<=n;i++) 
+  {
+     x=fin.Readline();
+     y=fin.Readline();
+     s=Number(x)+Number(y);
+     document.write(s+"<BR>");
+     fout.Writeline(s);
+  }
+  fin.close();fout.close();
+</SCRIPT>
